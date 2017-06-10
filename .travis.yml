@@ -1,0 +1,16 @@
+sudo: required
+services:
+- docker
+git:
+  depth: 3
+script:
+  - docker build -t golang .
+  - docker run -d --name golang golang go version
+branches:
+  only:
+  - master
+  - develop
+notifications:
+  email: false
+  slack:
+    secure: MdMfm9ycBZCUY+5yd3xu+V31/mh2lyP9K9NIf3OCNGcC6PEcmod+toUF5d4w9VcvmYqdzFFBkYTFrDcz2PZkshx8WyIQ2ijBj+VHyqsKZeY2dzfvUWzCBVDwinZSTLGkkGYuA934mnBv6V+uAlnVcL1bboH1OhQXfQhICzBvBjHF/BRZkkk93REthJwgAOHJF2EBM8fG/90poB4nGFV29DhZOEFmSufBjSzBUEj93jf46Yap2bRtY7fWmHY1BsGU4UfL0VCEIJrNcxSXvj+Nh/ASiewdknM0Gh67gfNRUgdIWVy4SqJQzBDzCqljQFu9BLUMZsPcjpXRbyjqgq3o9/GawkGiYP363HtIRmJmbQM+hNUlZW86lDfDS4c9kPX5NzCYNZm8K9A81DMUaXFw1mq6kfN+psWliSXQx/IJTp3vADMHK19R+wGhR44dSTZL1vD68cxpiAloGSrnObplbGLSJGrT/Gj2xBypXmMlSq895eCB4qCcPK8pim72RMRnNmEbxoT840TPZbNN3A10R3sOJnz10DfOboeV8KCk3R33PaYE8BZxwrnMf2bymNGG0Li1xkHTSSLn03Ti2QsaqMMKuYYS/3hZvBjMbeu3YjpL7o0xV5o3LVB9JBPLHTbj6wbwSVSlOQWfWTOJWsUx2f7asWP+5AjoPPArxYO1HXc=
