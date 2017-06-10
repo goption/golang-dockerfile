@@ -5,7 +5,7 @@ git:
   depth: 3
 script:
   - docker build -t golang .
-  - docker run -d --name golang golang go version
+  - docker run golang go version
 branches:
   only:
   - master
