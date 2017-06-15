@@ -1,4 +1,4 @@
-# golang-dockerfile
+# golang-dockerfile [![Build Status](https://travis-ci.org/goption/golang-dockerfile.svg?branch=develop)](https://travis-ci.org/goption/golang-dockerfile)
 Create a ready-to-use Golang environment with a few helpful environment variables
 
 ## The Process
